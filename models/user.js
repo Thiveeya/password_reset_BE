@@ -1,31 +1,23 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
-const Joi = require("joi");
 
-const userSchema = new Schema({
-    name: {
-        type: String,
-        required: true,
+const mongoose=require('mongoose');
+
+//Schema for user contents
+const userSchema=new mongoose.Schema({
+    name:{
+        type:String,
+        require:true
     },
-    email: {
-        type: String,
-        required: true,
+    email:{
+        type:String,
+        require:true
     },
-    password: {
-        type: String,
-        required: true,
+    password:{
+        type:String,
+        require:true
     },
-});
+    resettoken:{
+        type:String
+    }
+})
 
-const User = mongoose.model("user", userSchema);
-
-const validate = (user) => {
-    const schema = Joi.object({
-        name: Joi.string().required(),
-        email: Joi.string().email().required(),
-        password: Joi.string().required(),
-    });
-    return schema.validate(user);
-};
-
-module.exports = { User, validate };
+module.exports=mongoose.model('User',userSchema)
