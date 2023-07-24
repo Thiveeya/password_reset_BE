@@ -4,7 +4,7 @@
 
 
 
- const {getUser,getUserRestrictData,saveUser,resetPassword,passwordUpdate}=require('../../controller/usercontroller')
+ const {getUser,getUserRestrictData,saveUser,resetPassword,passwordUpdate}=require('../controller/usercontroller')
 
 const router=require('express').Router();
 
