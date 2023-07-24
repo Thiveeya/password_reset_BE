@@ -30,6 +30,7 @@ app.get("/", (req, res) => {
     res.send("password reset API working good");
 })
 
+
 // listen and start http server in localhost
 app.listen(port, () => {
     console.log(`Server connected in Localhost:${port}`);
