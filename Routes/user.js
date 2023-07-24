@@ -13,7 +13,7 @@ const transport = nodemailer.createTransport({
 
 const router = express.Router();
 
-const URL = 'https://password-resetapp.netlify.app'
+const URL = 'https://incomparable-chaja-378b57.netlify.app'
 
 
 // signup page
